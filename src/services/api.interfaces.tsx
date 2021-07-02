@@ -18,7 +18,7 @@ export interface Character {
     films: string[];
     species: string[];
     vehicles: string[];
-    tarships: string[];
+    starships: string[];
     created: string;
     edited: string;
     url: string;

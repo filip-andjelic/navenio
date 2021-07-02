@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
     return (
         <div className="app-header">
-            <span>STAR WARS HEROES</span>
+            <span className="title">STAR WARS HEROES</span>
         </div>
     );
 };

@@ -24,31 +24,31 @@ const CharacterDetails = (
             <div className="details-row">
                 <span>Gender</span>
 
-                <span>{gender}</span>
+                <span className="gender-label">{gender}</span>
             </div>
 
             <div className="details-row">
                 <span>Birth year</span>
 
-                <span>{birth_year}</span>
+                <span className="birth-label">{birth_year}</span>
             </div>
 
             <div className="details-row">
                 <span>Height</span>
 
-                <span>{height}</span>
+                <span className="height-label">{height}</span>
             </div>
 
             <div className="details-row">
                 <span>Mass</span>
 
-                <span>{mass}</span>
+                <span className="mass-label">{mass}</span>
             </div>
 
             <div className="details-row">
                 <span>Hair color</span>
 
-                <span>{hair_color}</span>
+                <span className="hair-label">{hair_color}</span>
             </div>
         </div>
     );
