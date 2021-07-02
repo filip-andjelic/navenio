@@ -22,7 +22,17 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "test:coverage": "react-scripts test --coverage --runInBand --watchAll=false",
-    "isready": "npm run format && npm run lint && npm run test:coverage && npm run build"
+    "isready": "npm run format && npm run lint && npm run test:coverage && npm run build",
+    "watch": "node-sass ./src/scss/main.scss ./public/css/style.css -w --source-map true",
+    "watch:min": "node-sass ./src/scss/main.scss ./public/css/style.min.css -w --output-style compressed",
+    "prefx": "postcss --use autoprefixer -b \"last 10 versions\" ./public/css/style.css -o ./public/css/style.css --no-map",
+    "prefx:min": "postcss --use autoprefixer -b \"last 10 versions\" ./public/css/style.min.css -o ./public/css/style.min.css --no-map",
+    "build:compile": "node-sass ./src/scss/main.scss ./public/css/style.css --source-map true && node-sass ./src/scss/main.scss ./public/css/style.min.css --output-style compressed",
+    "build:autoprefix": "npm run prefx && npm run prefx:min",
+    "build-css": "run-s build:**",
+    "dev": "concurrently \"yarn build-css\" \"yarn start\" \"yarn watch\"",
+    "production": "npm run build-css && npm run build",
+    "lint": "eslint src --ext ts --ext tsx --fix"
   },
   "eslintConfig": {
     "extends": [

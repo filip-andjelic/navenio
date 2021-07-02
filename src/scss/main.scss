@@ -1,0 +1,70 @@
+body {
+    background-color: mintcream;
+    margin: 0;
+    & * {
+        box-sizing: border-box;
+    }
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.app {
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        margin: 0 auto;
+        max-width: 650px;
+        min-width: 320px;
+
+        .characters-list {
+            .character-details {
+                margin-bottom: 35px;
+            }
+        }
+    }
+}
+
+@import "./search-component";
+@import "./header";
+@import "./character-details";
+
+@media screen and (max-width: 960px) {
+    .app main {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 798px) {
+    .app main {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    html {
+        font-size: 13px;
+    }
+    .app main {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .app {
+        .app-header {
+            margin-bottom: 50px;
+            font-size: 2rem;
+            height: 80px;
+        }
+
+        main {
+            width: 95%;
+            padding: 0 5px;
+
+            .search-component {
+                padding: 8px 10px;
+            }
+        }
+    }
+}
